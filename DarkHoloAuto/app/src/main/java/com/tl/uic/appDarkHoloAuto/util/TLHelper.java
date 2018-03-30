@@ -17,6 +17,7 @@ import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
+import android.widget.CompoundButton;
 import android.widget.DatePicker.OnDateChangedListener;
 import android.widget.DatePicker;
 import android.widget.RadioGroup;
@@ -30,7 +31,7 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 
 public class TLHelper {
-	
+
 	public static OnClickListener getOnClickListener() {
 		OnClickListener onClickListener = new OnClickListener() {
 
@@ -54,9 +55,9 @@ public class TLHelper {
 
 		return onItemClickListener;
 	}
-	
+
 	public static OnItemSelectedListener onItemSelected() {
-		
+
 		OnItemSelectedListener onItemSelectedListener = new OnItemSelectedListener() {
 			public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
 			}
@@ -65,93 +66,106 @@ public class TLHelper {
 		      // Do nothing.
 		    }
 		};
-		
+
 		return onItemSelectedListener;
     }
-	
+
 	public static OnSeekBarChangeListener getOnSeekBarChangeListener() {
-		
+
 		OnSeekBarChangeListener onClickListener = new OnSeekBarChangeListener() {
-			
+
 			@Override
 			public void onStopTrackingTouch(SeekBar seekBar) {
 			}
-			
+
 			@Override
 			public void onStartTrackingTouch(SeekBar seekBar) {
 			}
-			
+
 			@Override
 			public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 			}
 		};
-		
+
 		return onClickListener;
 	}
-	
+
 	public static OnCheckedChangeListener getOnCheckedChangeListener() {
-		
+
 		OnCheckedChangeListener onCheckedChangeListener = new OnCheckedChangeListener() {
-			
+
 			@Override
 			public void onCheckedChanged(RadioGroup group, int checkedId) {
 			}
 		};
-		
+
 		return onCheckedChangeListener;
 	}
-	
+
+	public static CompoundButton.OnCheckedChangeListener getCompoundButtonOnCheckedChangeListener() {
+
+		CompoundButton.OnCheckedChangeListener onCheckedChangeListener = new CompoundButton.OnCheckedChangeListener() {
+
+			@Override
+			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+			}
+		};
+
+		return onCheckedChangeListener;
+	}
+
+
 	public static OnRatingBarChangeListener getOnRatingBarChangeListener() {
-		
+
 		OnRatingBarChangeListener onRatingBarChangeListener = new OnRatingBarChangeListener() {
-			
+
 			@Override
 			public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
 
 			}
 		};
-		
+
 		return onRatingBarChangeListener;
 	}
-	
+
 	public static OnDateChangedListener getOnDateChangedListener() {
-		
+
 		OnDateChangedListener onDateChangedListener = new OnDateChangedListener() {
-			
+
 			@Override
 			public void onDateChanged(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
 
 			}
 		};
-		
+
 		return onDateChangedListener;
 	}
-	
+
 	public static void addFocusAndRegister(TextView textView, Activity activity) {
-		
+
 		textView.setOnFocusChangeListener(new OnFocusChangeListener() {
-			
+
 			@Override
 			public void onFocusChange(View v, boolean hasFocus) {
 
 			}
 		});
-		
+
 		Tealeaf.registerFormField(textView, activity);
 	}
-	
+
 	public static void logScreenLayoutOnCreate(final Fragment fragment, final Activity activity) {
 		Tealeaf.logScreenLayoutOnCreate(activity, getLogicalPageName(null, fragment));
 	}
-	
+
 	public static void logScreenLayoutOnCreate(final Fragment fragment, final Activity activity, final String logicalPageName) {
 		Tealeaf.logScreenLayoutOnCreate(activity, getLogicalPageName(logicalPageName, fragment));
 	}
-	
+
 	public static void logScreenLayout(final Fragment fragment, final Activity activity, final String logicalPageName, int delayMS) {
 		Tealeaf.logScreenLayout(activity, getLogicalPageName(logicalPageName, fragment), delayMS);
 	}
-	
+
 	public static String getLogicalPageName(String logicalPageName, Fragment fragment) {
 		 if ((logicalPageName == null) || (logicalPageName.equals(""))) {
 	         logicalPageName = fragment.getClass().getName().substring(fragment.getClass().getName().lastIndexOf('.') + 1);
