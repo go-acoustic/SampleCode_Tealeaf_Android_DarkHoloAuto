@@ -10,9 +10,9 @@ import java.util.ArrayList;
 
 import com.tl.uic.app.model.Items;
 import com.tl.uic.app.model.Items.Item;
-import com.tl.uic.appDarkHoloAuto.R;
 import com.tl.uic.appDarkHoloAuto.util.TLHelper;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -25,7 +25,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class ControlsActivity6 extends BaseActivity {
+public class ControlsActivity6 extends Activity {
 	private ArrayList<? extends Item> data;
 	private Items items = Items.getInstance();
 	private String packageName;
@@ -33,8 +33,8 @@ public class ControlsActivity6 extends BaseActivity {
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.controls6);
-		setLogicalPageName("c6");
-		packageName = this.getApplicationContext().getPackageName();
+
+	    packageName = this.getApplicationContext().getPackageName();
 	    data = items.getCategories();
 		
 	    ListView lv = (ListView) findViewById(R.id.listing1);

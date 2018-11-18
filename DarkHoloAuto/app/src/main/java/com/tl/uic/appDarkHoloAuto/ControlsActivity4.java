@@ -6,9 +6,9 @@
  ******************************************************************************/
 package com.tl.uic.appDarkHoloAuto;
 
-import com.tl.uic.appDarkHoloAuto.R;
 import com.tl.uic.appDarkHoloAuto.util.TLHelper;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.widget.AnalogClock;
 import android.widget.Chronometer;
@@ -20,12 +20,11 @@ import android.widget.ZoomButton;
 import android.widget.ZoomControls;
 
 @SuppressWarnings("deprecation")
-public class ControlsActivity4 extends BaseActivity {
+public class ControlsActivity4 extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.controls4);
-		setLogicalPageName("c4");
-	    
+
 	    TimePicker tp = (TimePicker) findViewById(R.id.timePicker1);
 	    tp.setOnClickListener(TLHelper.getOnClickListener());
 

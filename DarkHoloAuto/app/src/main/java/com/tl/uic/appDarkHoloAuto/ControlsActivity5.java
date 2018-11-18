@@ -6,6 +6,7 @@
  ******************************************************************************/
 package com.tl.uic.appDarkHoloAuto;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
@@ -14,11 +15,10 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class ControlsActivity5 extends BaseActivity {
+public class ControlsActivity5 extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.controls5);
-		setLogicalPageName("c5");
 
 	    Button button = (Button) findViewById(R.id.button1);
 	    button.setOnClickListener(new OnClickListener() {

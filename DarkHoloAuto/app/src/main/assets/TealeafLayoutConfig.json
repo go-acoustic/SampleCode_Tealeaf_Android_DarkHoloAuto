@@ -15,7 +15,7 @@
     "ControlsActivity1": {
       "do": true,
       "screenViewName": "CAuto1",
-      "delay": 500,
+      "delay": 1000,
       "takeScreenShot": false
     },
     "ControlsActivity2": {
