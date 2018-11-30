@@ -7,6 +7,8 @@
 package com.tl.uic.appDarkHoloAuto;
 
 import com.tl.uic.appDarkHoloAuto.util.TLHelper;
+
+import android.app.Activity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -20,12 +22,11 @@ import android.widget.ToggleButton;
  * @author ohernandezltmac
  *
  */
-public class ControlsActivity1 extends BaseActivity {
+public class ControlsActivity1 extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.controls1);
-		setLogicalPageName("c1");
-	    
+
 	    TextView t = (TextView) findViewById(R.id.textView1);
 	    t.setOnClickListener(TLHelper.getOnClickListener());
 	    t = (TextView) findViewById(R.id.textView2);

@@ -6,9 +6,9 @@
  ******************************************************************************/
 package com.tl.uic.appDarkHoloAuto;
 
-import com.tl.uic.appDarkHoloAuto.R;
 import com.tl.uic.appDarkHoloAuto.util.TLHelper;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -16,12 +16,11 @@ import android.widget.EditText;
 import android.widget.MultiAutoCompleteTextView;
 
 
-public class ControlsActivity3 extends BaseActivity {
+public class ControlsActivity3 extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.controls3);
-		setLogicalPageName("c3");
-	    
+
 	    EditText et = (EditText) findViewById(R.id.editText1);
 	    
 	    TLHelper.addFocusAndRegister(et, this);

@@ -9,9 +9,9 @@
  */
 package com.tl.uic.appDarkHoloAuto;
 
-import com.tl.uic.appDarkHoloAuto.R;
 import com.tl.uic.appDarkHoloAuto.util.TLHelper;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ProgressBar;
@@ -25,12 +25,11 @@ import android.widget.Spinner;
  * @author ohernandezltmac
  *
  */
-public class ControlsActivity2 extends BaseActivity {
+public class ControlsActivity2 extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.controls2);
-		setLogicalPageName("c2");
-	    
+
 	    RadioButton rb = (RadioButton) findViewById(R.id.radioButton1);
 	    rb.setOnClickListener(TLHelper.getOnClickListener());
 	    

@@ -6,18 +6,16 @@
  ******************************************************************************/
 package com.tl.uic.appDarkHoloAuto;
 
-import com.tl.uic.appDarkHoloAuto.R;
-
+import android.app.Activity;
 import android.os.Bundle;
 
 /**
  * @author ohernandezltmac
  *
  */
-public class ControlsActivity8 extends BaseActivity {
+public class ControlsActivity8 extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.controls8);
-        setLogicalPageName("c8");
     }
 }
