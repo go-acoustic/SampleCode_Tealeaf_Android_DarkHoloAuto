@@ -9,13 +9,11 @@ package com.tl.uic.appDarkHoloAuto.util;
 import com.tl.uic.Tealeaf;
 
 import android.app.Activity;
-import android.content.Context;
-import android.inputmethodservice.KeyboardView;
-import android.support.v4.app.Fragment;
+
+import androidx.fragment.app.Fragment;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.DatePicker.OnDateChangedListener;
 import android.widget.DatePicker;
