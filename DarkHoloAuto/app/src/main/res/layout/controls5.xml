@@ -6,7 +6,7 @@
  - restricted by GSA ADP Schedule Contract with IBM Corp.
  -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/scrollView1"
+    android:id="@+id/scrollView5"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
