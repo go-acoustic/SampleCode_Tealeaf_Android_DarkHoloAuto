@@ -6,6 +6,17 @@
 ******************************************************************************/
 {
   "AutoLayout": {
+  "IBMGlobalScreenSettings":{
+      "do": true,
+      "screenViewName": "",
+      "delay": 500,
+      "takeScreenShot": true,
+      "isWebView": false,
+      "numberOfWebviews": 0,
+      "CaptureScreenContents": true,
+      "CaptureScreenVisits": true,
+      "CaptureLayoutOn": 2
+  },
     "UICAndroidControlsAppActivity": {
       "do": false,
       "screenViewName": "UICAndroidControlsAppActivity",
