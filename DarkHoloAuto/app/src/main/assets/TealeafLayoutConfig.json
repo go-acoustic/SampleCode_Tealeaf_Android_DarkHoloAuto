@@ -24,42 +24,42 @@
     },
     "ControlsActivity1": {
       "ScreenChange": true,
-      "DisplayName": "CA1",
+      "DisplayName": "CAuto1",
       "CaptureLayoutDelay": 800
     },
     "ControlsActivity2": {
       "ScreenChange": true,
-      "DisplayName": "CA2",
+      "DisplayName": "CAuto2",
       "CaptureLayoutDelay": 200
     },
     "ControlsActivity3": {
       "ScreenChange": true,
-      "DisplayName": "CA3",
+      "DisplayName": "CAuto3",
       "CaptureLayoutDelay": 200
     },
     "ControlsActivity4": {
       "ScreenChange": true,
-      "DisplayName": "CA4",
+      "DisplayName": "CAuto4",
       "CaptureLayoutDelay": 200
     },
     "ControlsActivity5": {
       "ScreenChange": true,
-      "DisplayName": "CA5",
+      "DisplayName": "CAuto5",
       "CaptureLayoutDelay": 200
     },
     "ControlsActivity6": {
       "ScreenChange": true,
-      "DisplayName": "CA6",
+      "DisplayName": "CAuto6",
       "CaptureLayoutDelay": 200
     },
     "ControlsActivity7": {
       "ScreenChange": true,
-      "DisplayName": "CA7",
+      "DisplayName": "CAuto7",
       "CaptureLayoutDelay": 200
     },
     "ControlsActivity8": {
       "ScreenChange": true,
-      "DisplayName": "CA8",
+      "DisplayName": "CAuto8",
       "CaptureLayoutDelay": 200
     }
   },

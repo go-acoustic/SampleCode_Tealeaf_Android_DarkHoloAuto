@@ -20,7 +20,7 @@
   "ScreenViewUnloadDelay": 1000,
   "RemoveIp": false,
   "IpPlaceholder": "N/A",
-  "UseZindex": true,
+  "UseZindex": false,
   "InitialZIndex": 500,
   "StripDrawableFolderExt": true,
   "WebViewSetTagForId": false,
@@ -32,5 +32,5 @@
   "RemoveAllCookies": false,
   "ColorPrimary": "#3F51B5",
   "ColorPrimaryDark": "#303F9F",
-  "ColorAccent": "#FF4081",
+  "ColorAccent": "#FF4081"
 }
