@@ -10,6 +10,7 @@ import com.tl.uic.appDarkHoloAuto.util.TLHelper;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
@@ -63,4 +64,8 @@ public class ControlsActivity3 extends Activity {
 	private static final String[] COUNTRIES = new String[] {
         "Belgium", "France", "Italy", "Germany", "Spain"
     };
+	public boolean dispatchTouchEvent(MotionEvent e)
+	{
+		return super.dispatchTouchEvent(e);
+	}
 }

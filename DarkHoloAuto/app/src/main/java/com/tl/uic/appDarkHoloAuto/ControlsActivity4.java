@@ -10,6 +10,7 @@ import com.tl.uic.appDarkHoloAuto.util.TLHelper;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.widget.AnalogClock;
 import android.widget.Chronometer;
 import android.widget.DatePicker;
@@ -54,5 +55,9 @@ public class ControlsActivity4 extends Activity {
 */	    
 	    TwoLineListItem tl = (TwoLineListItem) findViewById(R.id.twoLineListItem1);
 	    tl.setOnClickListener(TLHelper.getOnClickListener());
+	}
+	public boolean dispatchTouchEvent(MotionEvent e)
+	{
+		return super.dispatchTouchEvent(e);
 	}
 }

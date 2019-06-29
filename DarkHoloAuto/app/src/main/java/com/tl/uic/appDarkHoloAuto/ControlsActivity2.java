@@ -13,6 +13,7 @@ import com.tl.uic.appDarkHoloAuto.util.TLHelper;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.widget.ArrayAdapter;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
@@ -63,5 +64,9 @@ public class ControlsActivity2 extends Activity {
 	    
 	    RatingBar rab = (RatingBar) findViewById(R.id.ratingBar1);
 	    rab.setOnRatingBarChangeListener(TLHelper.getOnRatingBarChangeListener());
+	}
+	public boolean dispatchTouchEvent(MotionEvent e)
+	{
+		return super.dispatchTouchEvent(e);
 	}
 }
