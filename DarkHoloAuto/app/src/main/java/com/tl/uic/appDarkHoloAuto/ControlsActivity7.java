@@ -18,6 +18,7 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -93,5 +94,10 @@ public class ControlsActivity7 extends Activity {
 			convertView.setOnClickListener(TLHelper.getOnClickListener());
 			return convertView;
 		}
+	}
+
+	public boolean dispatchTouchEvent(MotionEvent e)
+	{
+		return super.dispatchTouchEvent(e);
 	}
 }
