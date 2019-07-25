@@ -10,6 +10,7 @@ import com.tl.uic.appDarkHoloAuto.util.TLHelper;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
@@ -56,5 +57,10 @@ public class ControlsActivity1 extends Activity {
 
 	    CheckBox cb = (CheckBox) findViewById(R.id.checkBox1);
 	    cb.setOnClickListener(TLHelper.getOnClickListener());
+	}
+
+	public boolean dispatchTouchEvent(MotionEvent e)
+	{
+		return super.dispatchTouchEvent(e);
 	}
 }

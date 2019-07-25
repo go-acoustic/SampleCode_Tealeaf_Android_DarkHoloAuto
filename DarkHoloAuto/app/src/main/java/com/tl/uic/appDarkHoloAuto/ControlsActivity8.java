@@ -8,6 +8,7 @@ package com.tl.uic.appDarkHoloAuto;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 
 /**
  * @author ohernandezltmac
@@ -17,5 +18,10 @@ public class ControlsActivity8 extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.controls8);
+    }
+
+    public boolean dispatchTouchEvent(MotionEvent e)
+    {
+        return super.dispatchTouchEvent(e);
     }
 }
