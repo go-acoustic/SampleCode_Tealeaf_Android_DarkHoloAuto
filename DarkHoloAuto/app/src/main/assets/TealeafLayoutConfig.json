@@ -10,7 +10,7 @@
       "ScreenChange": true,
       "DisplayName": "",
       "CaptureLayoutDelay": 0,
-      "ScreenShot": true,
+      "ScreenShot": false,
       "NumberOfWebViews": 0,
       "CaptureUserEvents": true,
       "CaptureScreenVisits": true,
