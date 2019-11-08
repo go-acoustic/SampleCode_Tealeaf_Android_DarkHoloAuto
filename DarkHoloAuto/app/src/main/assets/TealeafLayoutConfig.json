@@ -6,11 +6,11 @@
 ******************************************************************************/
 {
   "AutoLayout": {
-    "IBMGlobalScreenSettings":{
+    "IBMGlobalScreenSettings": {
       "ScreenChange": true,
       "DisplayName": "",
-      "CaptureLayoutDelay": 0,
-      "ScreenShot": true,
+      "CaptureLayoutDelay": 500,
+      "ScreenShot": false,
       "NumberOfWebViews": 0,
       "CaptureUserEvents": true,
       "CaptureScreenVisits": true,
@@ -23,42 +23,34 @@
       "CaptureLayoutDelay": 1
     },
     "ControlsActivity1": {
-      "ScreenChange": true,
       "DisplayName": "CAuto1",
       "CaptureLayoutDelay": 800
     },
     "ControlsActivity2": {
-      "ScreenChange": true,
       "DisplayName": "CAuto2",
       "CaptureLayoutDelay": 200
     },
     "ControlsActivity3": {
-      "ScreenChange": true,
       "DisplayName": "CAuto3",
       "CaptureLayoutDelay": 200
     },
     "ControlsActivity4": {
-      "ScreenChange": true,
       "DisplayName": "CAuto4",
       "CaptureLayoutDelay": 200
     },
     "ControlsActivity5": {
-      "ScreenChange": true,
       "DisplayName": "CAuto5",
       "CaptureLayoutDelay": 200
     },
     "ControlsActivity6": {
-      "ScreenChange": true,
       "DisplayName": "CAuto6",
       "CaptureLayoutDelay": 200
     },
     "ControlsActivity7": {
-      "ScreenChange": true,
       "DisplayName": "CAuto7",
       "CaptureLayoutDelay": 200
     },
     "ControlsActivity8": {
-      "ScreenChange": true,
       "DisplayName": "CAuto8",
       "CaptureLayoutDelay": 200
     }
