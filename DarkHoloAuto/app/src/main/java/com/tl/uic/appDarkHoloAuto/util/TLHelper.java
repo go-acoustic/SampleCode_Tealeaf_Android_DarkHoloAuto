@@ -6,26 +6,26 @@
  ******************************************************************************/
 package com.tl.uic.appDarkHoloAuto.util;
 
-import com.tl.uic.Tealeaf;
-
 import android.app.Activity;
-
-import androidx.fragment.app.Fragment;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
 import android.widget.AdapterView;
-import android.widget.DatePicker.OnDateChangedListener;
-import android.widget.DatePicker;
-import android.widget.RadioGroup;
-import android.widget.RatingBar;
-import android.widget.TextView;
-import android.widget.RadioGroup.OnCheckedChangeListener;
-import android.widget.RatingBar.OnRatingBarChangeListener;
-import android.widget.SeekBar;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.DatePicker;
+import android.widget.DatePicker.OnDateChangedListener;
+import android.widget.RadioGroup;
+import android.widget.RadioGroup.OnCheckedChangeListener;
+import android.widget.RatingBar;
+import android.widget.RatingBar.OnRatingBarChangeListener;
+import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
+import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
+
+import com.tl.uic.Tealeaf;
 
 public class TLHelper {
 	
