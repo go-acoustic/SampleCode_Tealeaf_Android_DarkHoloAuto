@@ -95,7 +95,6 @@ public class ControlsActivity7 extends Activity {
 			return convertView;
 		}
 	}
-
 	public boolean dispatchTouchEvent(MotionEvent e)
 	{
 		return super.dispatchTouchEvent(e);

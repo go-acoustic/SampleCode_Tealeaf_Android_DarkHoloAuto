@@ -64,10 +64,8 @@ public class ControlsActivity3 extends Activity {
 	private static final String[] COUNTRIES = new String[] {
         "Belgium", "France", "Italy", "Germany", "Spain"
     };
-
 	public boolean dispatchTouchEvent(MotionEvent e)
 	{
 		return super.dispatchTouchEvent(e);
 	}
-
 }

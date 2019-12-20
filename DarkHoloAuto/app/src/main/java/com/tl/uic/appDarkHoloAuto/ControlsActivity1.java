@@ -58,7 +58,6 @@ public class ControlsActivity1 extends Activity {
 	    CheckBox cb = (CheckBox) findViewById(R.id.checkBox1);
 	    cb.setOnClickListener(TLHelper.getOnClickListener());
 	}
-
 	public boolean dispatchTouchEvent(MotionEvent e)
 	{
 		return super.dispatchTouchEvent(e);

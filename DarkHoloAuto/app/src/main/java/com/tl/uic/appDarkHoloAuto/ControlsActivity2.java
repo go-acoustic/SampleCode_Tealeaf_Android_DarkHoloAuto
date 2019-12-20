@@ -65,10 +65,8 @@ public class ControlsActivity2 extends Activity {
 	    RatingBar rab = (RatingBar) findViewById(R.id.ratingBar1);
 	    rab.setOnRatingBarChangeListener(TLHelper.getOnRatingBarChangeListener());
 	}
-
 	public boolean dispatchTouchEvent(MotionEvent e)
 	{
 		return super.dispatchTouchEvent(e);
 	}
-
 }

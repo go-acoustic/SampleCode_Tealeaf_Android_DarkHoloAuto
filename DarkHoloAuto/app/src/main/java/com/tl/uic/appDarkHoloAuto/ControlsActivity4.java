@@ -56,7 +56,6 @@ public class ControlsActivity4 extends Activity {
 	    TwoLineListItem tl = (TwoLineListItem) findViewById(R.id.twoLineListItem1);
 	    tl.setOnClickListener(TLHelper.getOnClickListener());
 	}
-
 	public boolean dispatchTouchEvent(MotionEvent e)
 	{
 		return super.dispatchTouchEvent(e);

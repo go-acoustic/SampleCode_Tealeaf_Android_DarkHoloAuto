@@ -23,7 +23,7 @@
         android:name="com.tl.uic.appDarkHoloAuto.MyApplication"
         android:allowBackup="false"
         android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.AppCompat.NoActionBar">
+        android:theme="@style/MyAppTheme">
 
     <!--android:screenOrientation="landscape"  -->
         <activity

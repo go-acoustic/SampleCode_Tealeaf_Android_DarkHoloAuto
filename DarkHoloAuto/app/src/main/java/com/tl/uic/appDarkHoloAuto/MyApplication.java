@@ -20,22 +20,4 @@ public class MyApplication extends Application {
 		// Enable Tealeaf library
 		Tealeaf.enable();
 	}
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public void onLowMemory() {
-        super.onLowMemory();
-        // TeaCuts (AspectJ) needs to have override methods to add hooks to it.
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public void onTerminate() {
-        super.onTerminate();
-        // TeaCuts (AspectJ) needs to have override methods to add hooks to it.
-    }
 }

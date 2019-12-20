@@ -19,7 +19,6 @@ public class ControlsActivity8 extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.controls8);
     }
-
     public boolean dispatchTouchEvent(MotionEvent e)
     {
         return super.dispatchTouchEvent(e);
