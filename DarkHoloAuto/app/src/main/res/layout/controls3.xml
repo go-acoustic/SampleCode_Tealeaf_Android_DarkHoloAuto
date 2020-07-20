@@ -47,64 +47,65 @@
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress" />
     
+        <EditText
+            android:id="@+id/editText6"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone" />
+    
+        <EditText
+            android:id="@+id/editText7"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPostalAddress" />
+    
+        <EditText
+            android:id="@+id/editText8"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine" />
+    
+        <EditText
+            android:id="@+id/editText9"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="time" />
+    
+        <EditText
+            android:id="@+id/editText10"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date" />
+    
+        <EditText
+            android:id="@+id/editText11"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+    
+        <EditText
+            android:id="@+id/editText12"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned" />
+    
+        <EditText
+            android:id="@+id/editText13"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+    
         <AutoCompleteTextView
             android:id="@+id/autoCompleteTextView1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/autoCompleteTextView" />
-
-        <TextView
+    
+        <MultiAutoCompleteTextView
+            android:id="@+id/multiAutoCompleteTextView1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:gravity="center"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:padding="@dimen/activity_horizontal_margin"
-            android:text="CXA Portal Environment"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
-            android:layout_gravity="center"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:textColor="@android:color/white"
-            android:text="App Key:" />
-
-        <EditText
-            android:id="@+id/appKey"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textColor="@android:color/white"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:text="Post Message URL:" />
-
-        <EditText
-            android:id="@+id/postMessageUrl"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"/>
-
-        <Button
-            android:id="@+id/saveButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:layout_gravity="center"
-            android:padding="@dimen/activity_horizontal_margin"
-            android:text="Save Settings" />
-
+            android:text="@string/multiAutoCompleteTextView" />
     
     </LinearLayout>
 </ScrollView>   
