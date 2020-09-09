@@ -1,16 +1,22 @@
-/*******************************************************************************
- * Licensed Materials - Property of IBM
- * 5725-K23
- * (c) Copyright IBM Corp. 2013, 2014
- * US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
- ******************************************************************************/
+/********************************************************************************************
+ * Copyright (C) 2020 Acoustic, L.P. All rights reserved.
+ *
+ * NOTICE: This file contains material that is confidential and proprietary to
+ * Acoustic, L.P. and/or other developers. No license is granted under any intellectual or
+ * industrial property rights of Acoustic, L.P. except as may be provided in an agreement with
+ * Acoustic, L.P. Any unauthorized copying or distribution of content from this file is
+ * prohibited.
+ ********************************************************************************************/
 package com.tl.uic.appDarkHoloAuto;
 
 import com.tl.uic.appDarkHoloAuto.util.TLHelper;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
@@ -19,47 +25,50 @@ import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
+import androidx.fragment.app.Fragment;
+
 /**
  * @author ohernandezltmac
  *
  */
-public class ControlsActivity1 extends Activity {
-	public void onCreate(Bundle savedInstanceState) {
-	    super.onCreate(savedInstanceState);
-	    setContentView(R.layout.controls1);
+public class ControlsActivity1 extends Fragment {
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		View v = inflater.inflate(R.layout.controls1, container, false);
 
-	    TextView t = (TextView) findViewById(R.id.textView1);
+	    TextView t = (TextView) v.findViewById(R.id.textView1);
 	    t.setOnClickListener(TLHelper.getOnClickListener());
-	    t = (TextView) findViewById(R.id.textView2);
+	    t = (TextView) v.findViewById(R.id.textView2);
 	    t.setOnClickListener(TLHelper.getOnClickListener());
-	    t = (TextView) findViewById(R.id.textView3);
+	    t = (TextView) v.findViewById(R.id.textView3);
 	    t.setOnClickListener(TLHelper.getOnClickListener());
-	    t = (TextView) findViewById(R.id.textView4);
+	    t = (TextView) v.findViewById(R.id.textView4);
 	    t.setOnClickListener(TLHelper.getOnClickListener());
 
-	    Button b = (Button) findViewById(R.id.button5);
+	    Button b = (Button) v.findViewById(R.id.button5);
 	    b.setOnClickListener(TLHelper.getOnClickListener());
 
-	    b = (Button) findViewById(R.id.button6);
+	    b = (Button) v.findViewById(R.id.button6);
 	    b.setOnClickListener(TLHelper.getOnClickListener());
 
-	    ImageButton ib = (ImageButton) findViewById(R.id.imageButton);
+	    ImageButton ib = (ImageButton) v.findViewById(R.id.imageButton);
 	    ib.setOnClickListener(TLHelper.getOnClickListener());
 
-	    ImageView iv = (ImageView) findViewById(R.id.imageView1);
+	    ImageView iv = (ImageView) v.findViewById(R.id.imageView1);
 	    iv.setOnClickListener(TLHelper.getOnClickListener());
 
-	    ToggleButton tb = (ToggleButton) findViewById(R.id.toggleButton1);
+	    ToggleButton tb = (ToggleButton) v.findViewById(R.id.toggleButton1);
 	    tb.setOnClickListener(TLHelper.getOnClickListener());
 
-	    MediaController mc = (MediaController) findViewById(R.id.mediaController1);
+	    MediaController mc = (MediaController) v.findViewById(R.id.mediaController1);
 	    mc.setOnClickListener(TLHelper.getOnClickListener());
 
-	    CheckBox cb = (CheckBox) findViewById(R.id.checkBox1);
+	    CheckBox cb = (CheckBox) v.findViewById(R.id.checkBox1);
 	    cb.setOnClickListener(TLHelper.getOnClickListener());
+	    return v;
 	}
-	public boolean dispatchTouchEvent(MotionEvent e)
-	{
-		return super.dispatchTouchEvent(e);
-	}
+//	public boolean dispatchTouchEvent(MotionEvent e)
+//	{
+//		return super.dispatchTouchEvent(e);
+//	}
 }

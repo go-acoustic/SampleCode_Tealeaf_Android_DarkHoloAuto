@@ -1,9 +1,12 @@
-/*******************************************************************************
- * Licensed Materials - Property of IBM
- * 5725-K23
- * (c) Copyright IBM Corp. 2013, 2014
- * US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
- ******************************************************************************/
+/********************************************************************************************
+ * Copyright (C) 2020 Acoustic, L.P. All rights reserved.
+ *
+ * NOTICE: This file contains material that is confidential and proprietary to
+ * Acoustic, L.P. and/or other developers. No license is granted under any intellectual or
+ * industrial property rights of Acoustic, L.P. except as may be provided in an agreement with
+ * Acoustic, L.P. Any unauthorized copying or distribution of content from this file is
+ * prohibited.
+ ********************************************************************************************/
 package com.tl.uic.appDarkHoloAuto;
 
 import java.util.ArrayList;
@@ -26,20 +29,22 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class ControlsActivity6 extends Activity {
+import androidx.fragment.app.Fragment;
+
+public class ControlsActivity6 extends Fragment {
 	private ArrayList<? extends Item> data;
 	private Items items = Items.getInstance();
 	private String packageName;
-	
-	public void onCreate(Bundle savedInstanceState) {
-	    super.onCreate(savedInstanceState);
-	    setContentView(R.layout.controls6);
 
-	    packageName = this.getApplicationContext().getPackageName();
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		View v = inflater.inflate(R.layout.controls6, container, false);
+
+	    packageName = this.getActivity().getApplicationContext().getPackageName();
 	    data = items.getCategories();
 		
-	    ListView lv = (ListView) findViewById(R.id.listing1);
-	    lv.setAdapter(new MyCustomAdapter(this));
+	    ListView lv = (ListView) v.findViewById(R.id.listing1);
+	    lv.setAdapter(new MyCustomAdapter(this.getActivity()));
+	    return v;
 	}
 	
 	static class Vholder {
@@ -95,8 +100,8 @@ public class ControlsActivity6 extends Activity {
 			return convertView;
 		}
 	}
-	public boolean dispatchTouchEvent(MotionEvent e)
-	{
-		return super.dispatchTouchEvent(e);
-	}
+//	public boolean dispatchTouchEvent(MotionEvent e)
+//	{
+//		return super.dispatchTouchEvent(e);
+//	}
 }

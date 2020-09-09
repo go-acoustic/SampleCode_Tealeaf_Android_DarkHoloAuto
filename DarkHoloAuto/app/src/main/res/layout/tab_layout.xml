@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Licensed Materials - Property of IBM
-  5725-K23
-  (c) Copyright IBM Corp. 2013, 2014
-  US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+  Copyright (C) 2020 Acoustic, L.P. All rights reserved.
+
+  NOTICE: This file contains material that is confidential and proprietary to
+  Acoustic, L.P. and/or other developers. No license is granted under any intellectual or
+  industrial property rights of Acoustic, L.P. except as may be provided in an agreement with
+  Acoustic, L.P. Any unauthorized copying or distribution of content from this file is
+  prohibited.
 -->
-<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@android:id/tabhost"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        >
-        <TabWidget
-            android:id="@android:id/tabs"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
-        <FrameLayout
-            android:id="@android:id/tabcontent"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-             />
-    </LinearLayout>
-</TabHost>
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/sliding_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="fixed" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

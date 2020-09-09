@@ -18,12 +18,12 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
         android:name="com.tl.uic.appDarkHoloAuto.MyApplication"
         android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
         android:usesCleartextTraffic="true"
-        android:theme="@style/MyAppTheme">
+        android:theme="@style/Theme.AppCompat">
 
     <!--android:screenOrientation="landscape"  -->
         <activity
@@ -35,14 +35,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.tl.uic.appDarkHoloAuto.ControlsActivity1" />
-        <activity android:name="com.tl.uic.appDarkHoloAuto.ControlsActivity2" />
-        <activity android:name="com.tl.uic.appDarkHoloAuto.ControlsActivity3" />
-        <activity android:name="com.tl.uic.appDarkHoloAuto.ControlsActivity4" />
-        <activity android:name="com.tl.uic.appDarkHoloAuto.ControlsActivity5" />
-        <activity android:name="com.tl.uic.appDarkHoloAuto.ControlsActivity6" />
-        <activity android:name="com.tl.uic.appDarkHoloAuto.ControlsActivity7" />
-        <activity android:name="com.tl.uic.appDarkHoloAuto.ControlsActivity8" />
     </application>
 
 </manifest>
