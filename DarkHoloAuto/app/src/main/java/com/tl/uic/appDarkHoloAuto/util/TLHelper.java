@@ -1,9 +1,12 @@
-/*******************************************************************************
- * Licensed Materials - Property of IBM
- * 5725-K23
- * (c) Copyright IBM Corp. 2017
- * US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
- ******************************************************************************/
+/********************************************************************************************
+ * Copyright (C) 2017 Acoustic, L.P. All rights reserved.
+ *
+ * NOTICE: This file contains material that is confidential and proprietary to
+ * Acoustic, L.P. and/or other developers. No license is granted under any intellectual or
+ * industrial property rights of Acoustic, L.P. except as may be provided in an agreement with
+ * Acoustic, L.P. Any unauthorized copying or distribution of content from this file is
+ * prohibited.
+ ********************************************************************************************/
 package com.tl.uic.appDarkHoloAuto.util;
 
 import android.app.Activity;
@@ -13,6 +16,7 @@ import android.view.View.OnFocusChangeListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.DatePicker.OnDateChangedListener;
 import android.widget.RadioGroup;
@@ -98,7 +102,19 @@ public class TLHelper {
 		
 		return onCheckedChangeListener;
 	}
-	
+
+	public static CompoundButton.OnCheckedChangeListener getCompoundButtonOnCheckedChangeListener() {
+
+		CompoundButton.OnCheckedChangeListener onCheckedChangeListener = new CompoundButton.OnCheckedChangeListener() {
+
+			@Override
+			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+			}
+		};
+
+		return onCheckedChangeListener;
+	}
+
 	public static OnRatingBarChangeListener getOnRatingBarChangeListener() {
 		
 		OnRatingBarChangeListener onRatingBarChangeListener = new OnRatingBarChangeListener() {
@@ -136,18 +152,6 @@ public class TLHelper {
 		});
 		
 		Tealeaf.registerFormField(textView, activity);
-	}
-	
-	public static void logScreenLayoutOnCreate(final Fragment fragment, final Activity activity) {
-		Tealeaf.logScreenLayoutOnCreate(activity, getLogicalPageName(null, fragment));
-	}
-	
-	public static void logScreenLayoutOnCreate(final Fragment fragment, final Activity activity, final String logicalPageName) {
-		Tealeaf.logScreenLayoutOnCreate(activity, getLogicalPageName(logicalPageName, fragment));
-	}
-	
-	public static void logScreenLayout(final Fragment fragment, final Activity activity, final String logicalPageName, int delayMS) {
-		Tealeaf.logScreenLayout(activity, getLogicalPageName(logicalPageName, fragment), delayMS);
 	}
 	
 	public static String getLogicalPageName(String logicalPageName, Fragment fragment) {

@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-	Licensed Materials - Property of IBM
-	(C) Copyright IBM Corp. 2016
-    US Government Users Restricted Rights - Use, duplication or disclosure
-    restricted by GSA ADP Schedule Contract with IBM Corp.
+  Copyright (C) 2020 Acoustic, L.P. All rights reserved.
+
+  NOTICE: This file contains material that is confidential and proprietary to
+  Acoustic, L.P. and/or other developers. No license is granted under any intellectual or
+  industrial property rights of Acoustic, L.P. except as may be provided in an agreement with
+  Acoustic, L.P. Any unauthorized copying or distribution of content from this file is
+  prohibited.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tl.uic.appDarkHoloAuto"
@@ -13,17 +16,16 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
         android:name="com.tl.uic.appDarkHoloAuto.MyApplication"
         android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
         android:usesCleartextTraffic="true"
-        android:theme="@style/MyAppTheme">
+        android:theme="@style/Theme.AppCompat">
 
     <!--android:screenOrientation="landscape"  -->
         <activity
@@ -35,14 +37,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.tl.uic.appDarkHoloAuto.ControlsActivity1" />
-        <activity android:name="com.tl.uic.appDarkHoloAuto.ControlsActivity2" />
-        <activity android:name="com.tl.uic.appDarkHoloAuto.ControlsActivity3" />
-        <activity android:name="com.tl.uic.appDarkHoloAuto.ControlsActivity4" />
-        <activity android:name="com.tl.uic.appDarkHoloAuto.ControlsActivity5" />
-        <activity android:name="com.tl.uic.appDarkHoloAuto.ControlsActivity6" />
-        <activity android:name="com.tl.uic.appDarkHoloAuto.ControlsActivity7" />
-        <activity android:name="com.tl.uic.appDarkHoloAuto.ControlsActivity8" />
     </application>
 
 </manifest>
