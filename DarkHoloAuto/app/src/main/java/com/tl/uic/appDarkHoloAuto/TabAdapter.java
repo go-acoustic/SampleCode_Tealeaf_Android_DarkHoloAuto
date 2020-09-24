@@ -10,18 +10,9 @@
 package com.tl.uic.appDarkHoloAuto;
 
 import android.content.Context;
-<<<<<<< HEAD
 import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
-=======
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.TextView;
-
-import androidx.annotation.Nullable;
-import androidx.core.content.ContextCompat;
->>>>>>> dd6dfbd31afcf3d79c35bab4f4b41daf8f3ef63b
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -34,7 +25,6 @@ public class TabAdapter extends FragmentPagerAdapter {
     private final List<String> mFragmentTitleList = new ArrayList<>();
     private Context context;
 
-<<<<<<< HEAD
     private Fragment mCurrentFragment;
 
     public Fragment getCurrentFragment() {
@@ -49,62 +39,30 @@ public class TabAdapter extends FragmentPagerAdapter {
         super.setPrimaryItem(container, position, object);
     }
 
-=======
->>>>>>> dd6dfbd31afcf3d79c35bab4f4b41daf8f3ef63b
     TabAdapter(FragmentManager fm, Context context) {
         super(fm);
         this.context = context;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> dd6dfbd31afcf3d79c35bab4f4b41daf8f3ef63b
     @Override
     public Fragment getItem(int position) {
         return mFragmentList.get(position);
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> dd6dfbd31afcf3d79c35bab4f4b41daf8f3ef63b
     public void addFragment(Fragment fragment, String title) {
         mFragmentList.add(fragment);
         mFragmentTitleList.add(title);
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> dd6dfbd31afcf3d79c35bab4f4b41daf8f3ef63b
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
         return mFragmentTitleList.get(position);
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> dd6dfbd31afcf3d79c35bab4f4b41daf8f3ef63b
     @Override
     public int getCount() {
         return mFragmentList.size();
     }
 
-<<<<<<< HEAD
-=======
-//    public View getTabView(int position) {
-//        View view = LayoutInflater.from(context).inflate(R.layout.custom_tab, null);
-//        TextView tabTextView = view.findViewById(R.id.tabTextView);
-//        tabTextView.setText(mFragmentTitleList.get(position));
-//        return view;
-//    }
-//
-//    public View getSelectedTabView(int position) {
-//        View view = LayoutInflater.from(context).inflate(R.layout.custom_tab, null);
-//        TextView tabTextView = view.findViewById(R.id.tabTextView);
-//        tabTextView.setText(mFragmentTitleList.get(position));
-//        tabTextView.setTextSize(26); // for big text, increase text size
-//        tabTextView.setTextColor(ContextCompat.getColor(context, R.color.yellow));
-//        return view;
-//    }
->>>>>>> dd6dfbd31afcf3d79c35bab4f4b41daf8f3ef63b
 }
