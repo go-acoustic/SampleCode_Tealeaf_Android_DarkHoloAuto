@@ -1,12 +1,4 @@
-<resources>>
-
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-    </style>
-
+<resources>
     <!-- inherit from the material theme -->
     <style name="MyAppTheme" parent="android:Theme.Material">
         <!-- Main theme colors -->

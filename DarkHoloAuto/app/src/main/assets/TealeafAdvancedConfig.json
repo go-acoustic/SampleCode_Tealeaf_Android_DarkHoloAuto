@@ -21,7 +21,7 @@
   "KillSwitchDelay": 300,
   "GenerateImageHash": true,
   "SwitchWidth": 140,
-  "EnableActivityLifeCycleListener": true,
+  "EnableActivityLifeCycleListener": false,
   "UseXpathId": false,
   "RemoveAllCookies": false,
   "ColorPrimary": "#3F51B5",

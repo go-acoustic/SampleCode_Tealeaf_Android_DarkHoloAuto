@@ -13,6 +13,7 @@ import android.view.View.OnFocusChangeListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.DatePicker.OnDateChangedListener;
 import android.widget.RadioGroup;
@@ -98,7 +99,19 @@ public class TLHelper {
 		
 		return onCheckedChangeListener;
 	}
-	
+
+	public static CompoundButton.OnCheckedChangeListener getCompoundButtonOnCheckedChangeListener() {
+
+		CompoundButton.OnCheckedChangeListener onCheckedChangeListener = new CompoundButton.OnCheckedChangeListener() {
+
+			@Override
+			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+			}
+		};
+
+		return onCheckedChangeListener;
+	}
+
 	public static OnRatingBarChangeListener getOnRatingBarChangeListener() {
 		
 		OnRatingBarChangeListener onRatingBarChangeListener = new OnRatingBarChangeListener() {
@@ -136,18 +149,6 @@ public class TLHelper {
 		});
 		
 		Tealeaf.registerFormField(textView, activity);
-	}
-	
-	public static void logScreenLayoutOnCreate(final Fragment fragment, final Activity activity) {
-		Tealeaf.logScreenLayoutOnCreate(activity, getLogicalPageName(null, fragment));
-	}
-	
-	public static void logScreenLayoutOnCreate(final Fragment fragment, final Activity activity, final String logicalPageName) {
-		Tealeaf.logScreenLayoutOnCreate(activity, getLogicalPageName(logicalPageName, fragment));
-	}
-	
-	public static void logScreenLayout(final Fragment fragment, final Activity activity, final String logicalPageName, int delayMS) {
-		Tealeaf.logScreenLayout(activity, getLogicalPageName(logicalPageName, fragment), delayMS);
 	}
 	
 	public static String getLogicalPageName(String logicalPageName, Fragment fragment) {

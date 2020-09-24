@@ -26,7 +26,9 @@
           "symbol": "#"
         },
         "MaskIdList": [
-          "textView1,login.password,editText*"
+          "textView1",
+          "login.password",
+          "editText"
         ],
         "MaskValueList": [
           "^4[0-9]{12}(?:[0-9]{3})?$",
@@ -37,48 +39,41 @@
       }
     },
     "UICAndroidControlsAppActivity": {
-      "ScreenChange": false,
-      "DisplayName": "UICAndroidControlsAppActivity",
-      "CaptureLayoutDelay": 1
-    },
-    "ControlsActivity1": {
       "ScreenChange": true,
-      "DisplayName": "CAuto1",
+      "DisplayName": "UICAndroidControlsAppActivity",
+      "CaptureLayoutOn": 0,
+      "CaptureScreenshotOn": 0
+    },
+    "ControlsFragment1": {
+      "DisplayName": "CA1",
       "CaptureLayoutDelay": 800
     },
-    "ControlsActivity2": {
-      "ScreenChange": true,
-      "DisplayName": "CAuto2",
+    "ControlsFragment2": {
+      "DisplayName": "CA2",
       "CaptureLayoutDelay": 200
     },
-    "ControlsActivity3": {
-      "ScreenChange": true,
-      "DisplayName": "CAuto3",
+    "ControlsFragment3": {
+      "DisplayName": "CA3",
       "CaptureLayoutDelay": 200
     },
-    "ControlsActivity4": {
-      "ScreenChange": true,
-      "DisplayName": "CAuto4",
+    "ControlsFragment4": {
+      "DisplayName": "CA4",
       "CaptureLayoutDelay": 200
     },
-    "ControlsActivity5": {
-      "ScreenChange": true,
-      "DisplayName": "CAuto5",
+    "ControlsFragment5": {
+      "DisplayName": "CA5",
       "CaptureLayoutDelay": 200
     },
-    "ControlsActivity6": {
-      "ScreenChange": true,
-      "DisplayName": "CAuto6",
+    "ControlsFragment6": {
+      "DisplayName": "CA6",
       "CaptureLayoutDelay": 200
     },
-    "ControlsActivity7": {
-      "ScreenChange": true,
-      "DisplayName": "CAuto7",
+    "ControlsFragment7": {
+      "DisplayName": "CA7",
       "CaptureLayoutDelay": 200
     },
-    "ControlsActivity8": {
-      "ScreenChange": true,
-      "DisplayName": "CAuto8",
+    "ControlsFragment8": {
+      "DisplayName": "CA8",
       "CaptureLayoutDelay": 200
     }
   },
@@ -91,3 +86,4 @@
     }
   }
 }
+
