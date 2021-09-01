@@ -76,7 +76,7 @@ public class ControlsFragment1 extends Fragment {
             public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
                 // Scroll offset before calling Tealeaf Logscreen API
                 if (scrollY - oldScrollY > 100) {
-                    Tealeaf.logScreenLayout(activity, "CustomScrollViewLog");
+                    Tealeaf.logScreenLayout(activity, "CustomScrollViewLog", 0, true);
                 }
             }
         });
@@ -86,7 +86,7 @@ public class ControlsFragment1 extends Fragment {
         logScreenButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Tealeaf.logScreenLayout(activity, "CustomButtonLog", 10);
+                Tealeaf.logScreenLayout(activity, "CustomButtonLog", 10, true);
             }
         });
         return v;
