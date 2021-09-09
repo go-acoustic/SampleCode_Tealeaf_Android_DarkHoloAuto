@@ -263,11 +263,27 @@
             android:text="test3" />
 
         <Button
-            android:id="@+id/buttonCaptureScreen"
-            android:layout_width="wrap_content"
+            android:id="@+id/buttonCaptureScreen1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:background="@color/buttonBackground"
-            android:text="Log Screen" />
+            android:text="Log Screen with LayaoutConfig" />
+
+        <Button
+            android:id="@+id/buttonCaptureScreen2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@color/buttonBackground"
+            android:text="Log Screen without screenshot" />
+
+        <Button
+            android:id="@+id/buttonCaptureScreen3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@color/buttonBackground"
+            android:text="Log Screen with screenshot" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

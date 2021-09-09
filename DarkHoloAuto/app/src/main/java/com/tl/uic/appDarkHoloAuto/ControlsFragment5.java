@@ -75,6 +75,17 @@ public class ControlsFragment5 extends Fragment {
             }
         });
 
+        button = (Button) v.findViewById(R.id.button3);
+        button.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AddPhotoBottomDialogFragment addPhotoBottomDialogFragment =
+                        AddPhotoBottomDialogFragment.newInstance();
+                addPhotoBottomDialogFragment.show(ControlsFragment5.this.getActivity().getSupportFragmentManager(),
+                        "add_photo_dialog_fragment");
+            }
+        });
+
         return v;
     }
 }

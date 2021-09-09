@@ -81,14 +81,30 @@ public class ControlsFragment1 extends Fragment {
             }
         });
 
-        Button logScreenButton = v.findViewById(R.id.buttonCaptureScreen);
-
-        logScreenButton.setOnClickListener(new View.OnClickListener() {
+        Button logScreenButton1 = (Button) v.findViewById(R.id.buttonCaptureScreen1);
+        logScreenButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Tealeaf.logScreenLayout(activity, "CustomButtonLog", 10, true);
+                Tealeaf.logScreenLayout(getActivity(), "CustomButtonLog", 500);
             }
         });
+
+        Button logScreenButton2 = (Button) v.findViewById(R.id.buttonCaptureScreen2);
+        logScreenButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tealeaf.logScreenLayout(getActivity(), "CustomButtonLog", 500,false);
+            }
+        });
+
+        Button logScreenButton3 = (Button) v.findViewById(R.id.buttonCaptureScreen3);
+        logScreenButton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tealeaf.logScreenLayout(getActivity(), "CustomButtonLog", 500, true);
+            }
+        });
+
         return v;
     }
 }
