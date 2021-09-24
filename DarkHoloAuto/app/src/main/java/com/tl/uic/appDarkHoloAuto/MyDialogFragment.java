@@ -1,24 +1,21 @@
-/********************************************************************************************
- * Copyright (C) 2018 Acoustic, L.P. All rights reserved.
- *
- * NOTICE: This file contains material that is confidential and proprietary to
- * Acoustic, L.P. and/or other developers. No license is granted under any intellectual or
- * industrial property rights of Acoustic, L.P. except as may be provided in an agreement with
- * Acoustic, L.P. Any unauthorized copying or distribution of content from this file is
- * prohibited.
- ********************************************************************************************/
+/*******************************************************************************
+ * Licensed Materials - Property of IBM
+ * (C) Copyright IBM Corp. 2018
+ * US Government Users Restricted Rights - Use, duplication or disclosure
+ * restricted by GSA ADP Schedule Contract with IBM Corp.
+ ******************************************************************************/
+
 package com.tl.uic.appDarkHoloAuto;
 
 import android.app.Activity;
 import android.app.Dialog;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.tl.uic.Tealeaf;
 import com.tl.uic.util.DialogLogScreenTask;
@@ -65,8 +62,6 @@ public class MyDialogFragment extends DialogFragment {
             activity = activity.getParent();
         }
 
-        // Handles case where onShow method is being overridden
-        final DialogLogScreenTask dialogLogScreenTask = new DialogLogScreenTask(activity, "CA5", this.getDialog(), Tealeaf.getCurrentSessionId());
-        dialogLogScreenTask.execute();
+        Tealeaf.logScreenLayoutSetOnShowListener(this.getActivity(), this.getDialog(), "MyDialogFragment", false);
     }
 }
