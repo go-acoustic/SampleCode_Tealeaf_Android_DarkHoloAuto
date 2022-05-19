@@ -21,6 +21,8 @@ public class MyApplication extends Application {
         // TeaCuts (AspectJ) needs to have override methods to add hooks to it.
 
 		// Enable Tealeaf library
+		new Tealeaf(this);
 		Tealeaf.enable();
+
 	}
 }
