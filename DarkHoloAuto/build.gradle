@@ -19,12 +19,8 @@ allprojects {
     repositories {
         mavenCentral()
         google()
-//        maven {
-//            url "https://raw.githubusercontent.com/acoustic-analytics/Android_Maven/master"
-//        }
         maven {
-            // Local
-            url System.getenv('HOME') + '/Developer/Acoustic/Android_Maven/'
+            url "https://raw.githubusercontent.com/acoustic-analytics/Android_Maven/beta"
         }
     }
 }

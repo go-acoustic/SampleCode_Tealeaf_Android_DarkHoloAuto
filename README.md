@@ -1,6 +1,5 @@
 # SampleCode_Tealeaf_DarkHoloAuto
-DarkHoloAuto instrumented with Tealeaf sdk.
+DarkHoloAuto instrumented with Tealeaf SDK.
 
-Built with Android Studio 4.0.0, Gradle version 6.1.1 
-Support AndroidX, API level 16 to 30.
-Support Kotlin 1.3.72
+Built with Android Studio Chipmunk, Gradle version 7.2
+Support AndroidX, API level 21 to 32.
