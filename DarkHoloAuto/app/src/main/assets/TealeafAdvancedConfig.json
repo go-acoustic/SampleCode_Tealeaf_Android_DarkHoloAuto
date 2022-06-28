@@ -1,5 +1,14 @@
+/********************************************************************************************
+* Copyright (C) 2022 Acoustic, L.P. All rights reserved.
+ *
+ * NOTICE: This file contains material that is confidential and proprietary to
+ * Acoustic, L.P. and/or other developers. No license is granted under any intellectual or
+ * industrial property rights of Acoustic, L.P. except as may be provided in an agreement with
+ * Acoustic, L.P. Any unauthorized copying or distribution of content from this file is
+ * prohibited.
+********************************************************************************************/
 {
-  "LibraryVersion": "10.3.119",
+  "LibraryVersion": "10.3.194",
   "FilterMessageTypes": false,
   "MessageTypes": "4,5",
   "AddMessageTypeHeader": false,
@@ -22,7 +31,9 @@
   "KillSwitchDelay": 300,
   "GenerateImageHash": true,
   "SwitchWidth": 140,
-  "EnableActivityLifeCycleListener": true,
+  "EnableActivityLifeCycleListener": false,
+  "EditTextEnabled": true,
+  "TouchEventEnabled": false,
   "UseXpathId": false,
   "RemoveAllCookies": false,
   "ColorPrimary": "#3F51B5",
