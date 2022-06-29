@@ -36,37 +36,6 @@ public class ControlsFragment1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.controls1, container, false);
 
-        TextView t = v.findViewById(R.id.textView1);
-        t.setOnClickListener(TLHelper.getOnClickListener());
-        t = v.findViewById(R.id.textView2);
-        t.setOnClickListener(TLHelper.getOnClickListener());
-        t = v.findViewById(R.id.textView3);
-        t.setOnClickListener(TLHelper.getOnClickListener());
-        t = v.findViewById(R.id.textView4);
-        t.setOnClickListener(TLHelper.getOnClickListener());
-
-        Button b = v.findViewById(R.id.button5);
-        b.setOnClickListener(TLHelper.getOnClickListener());
-
-        b = v.findViewById(R.id.button6);
-        b.setOnClickListener(TLHelper.getOnClickListener());
-
-        ImageButton ib = v.findViewById(R.id.imageButton);
-        ib.setOnClickListener(TLHelper.getOnClickListener());
-
-        ImageView iv = v.findViewById(R.id.imageView1);
-        iv.setOnClickListener(TLHelper.getOnClickListener());
-
-        ToggleButton tb = v.findViewById(R.id.toggleButton1);
-        tb.setOnClickListener(TLHelper.getOnClickListener());
-
-        MediaController mc = v.findViewById(R.id.mediaController1);
-        mc.setOnClickListener(TLHelper.getOnClickListener());
-
-        CheckBox cb = v.findViewById(R.id.checkBox1);
-        cb.setOnClickListener(TLHelper.getOnClickListener());
-
-
         // Instrumentation for Scrollview screen capture
         final NestedScrollView scrollView = v.findViewById(R.id.scrollView1);
         final Activity activity = this.getActivity();
@@ -81,6 +50,10 @@ public class ControlsFragment1 extends Fragment {
             }
         });
 
+
+        /**
+         * How to log screen layout
+         */
         Button logScreenButton1 = (Button) v.findViewById(R.id.buttonCaptureScreen1);
         logScreenButton1.setOnClickListener(new View.OnClickListener() {
             @Override

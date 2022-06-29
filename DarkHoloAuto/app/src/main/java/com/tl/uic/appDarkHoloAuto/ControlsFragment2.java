@@ -33,9 +33,6 @@ public class ControlsFragment2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.controls2, container, false);
 
-        RadioButton rb = v.findViewById(R.id.radioButton1);
-        rb.setOnClickListener(TLHelper.getOnClickListener());
-
         Spinner s = v.findViewById(R.id.spinner1);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this.getActivity(), R.array.planets_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

@@ -18,8 +18,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.tl.uic.Tealeaf;
-import com.tl.uic.util.DialogLogScreenTask;
-
 
 public class MyDialogFragment extends DialogFragment {
 

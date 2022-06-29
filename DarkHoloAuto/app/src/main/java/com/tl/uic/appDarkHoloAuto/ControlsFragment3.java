@@ -23,7 +23,6 @@ import androidx.fragment.app.Fragment;
 import com.ibm.eo.EOCore;
 import com.tl.uic.Tealeaf;
 import com.tl.uic.TealeafEOLifecycleObject;
-import com.tl.uic.appDarkHoloAuto.util.TLHelper;
 
 
 public class ControlsFragment3 extends Fragment {

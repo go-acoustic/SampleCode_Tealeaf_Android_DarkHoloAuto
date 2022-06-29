@@ -14,12 +14,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Switch;
 
 import androidx.fragment.app.Fragment;
 
 import com.tl.uic.Tealeaf;
-import com.tl.uic.appDarkHoloAuto.util.TLHelper;
 import com.tl.uic.model.Connection;
 
 import java.net.HttpURLConnection;
@@ -33,12 +31,6 @@ import java.util.HashMap;
 public class ControlsFragment8 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.controls8, container, false);
-
-        Switch sUw = v.findViewById(R.id.saveUname_switch);
-        sUw.setOnCheckedChangeListener(TLHelper.getCompoundButtonOnCheckedChangeListener());
-
-        Switch sw = v.findViewById(R.id.switch1);
-        sw.setOnCheckedChangeListener(TLHelper.getCompoundButtonOnCheckedChangeListener());
 
         Button button = v.findViewById(R.id.button1);
         final HashMap<String, String> data = new HashMap<>();

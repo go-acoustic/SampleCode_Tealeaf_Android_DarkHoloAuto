@@ -25,7 +25,6 @@ import androidx.fragment.app.Fragment;
 
 import com.tl.uic.app.model.Items;
 import com.tl.uic.app.model.Items.Item;
-import com.tl.uic.appDarkHoloAuto.util.TLHelper;
 
 import java.util.ArrayList;
 
@@ -94,8 +93,6 @@ public class ControlsFragment6 extends Fragment {
 
             vh.name.setText(data.get(position).getName());
             vh.thumb.setImageResource(data.get(position).getThumbnail());
-
-            convertView.setOnClickListener(TLHelper.getOnClickListener());
             return convertView;
         }
     }
