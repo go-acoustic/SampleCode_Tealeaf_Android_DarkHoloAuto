@@ -15,15 +15,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ProgressBar;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RatingBar;
 import android.widget.SeekBar;
 import android.widget.Spinner;
 
 import androidx.fragment.app.Fragment;
-
-import com.tl.uic.appDarkHoloAuto.util.TLHelper;
 
 /**
  * @author ohernandezltmac
@@ -38,31 +35,12 @@ public class ControlsFragment2 extends Fragment {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         s.setAdapter(adapter);
         s.setSelection(0, false);
-        s.setOnItemSelectedListener(TLHelper.onItemSelected());
 
-
-        ProgressBar pb1 = v.findViewById(R.id.progressBar1);
-        pb1.setOnClickListener(TLHelper.getOnClickListener());
-
-        ProgressBar pb2 = v.findViewById(R.id.progressBar2);
-        pb2.setOnClickListener(TLHelper.getOnClickListener());
-
-        ProgressBar pb3 = v.findViewById(R.id.progressBar3);
-        pb3.setOnClickListener(TLHelper.getOnClickListener());
 
         ProgressBar pb4 = v.findViewById(R.id.progressBar4);
         pb4.setMax(100);
         pb4.setProgress(45);
-        pb4.setOnClickListener(TLHelper.getOnClickListener());
 
-        SeekBar sb = v.findViewById(R.id.seekBar1);
-        sb.setOnSeekBarChangeListener(TLHelper.getOnSeekBarChangeListener());
-
-        RadioGroup rg = v.findViewById(R.id.radioGroup1);
-        rg.setOnCheckedChangeListener(TLHelper.getOnCheckedChangeListener());
-
-        RatingBar rab = v.findViewById(R.id.ratingBar1);
-        rab.setOnRatingBarChangeListener(TLHelper.getOnRatingBarChangeListener());
         return v;
     }
 }

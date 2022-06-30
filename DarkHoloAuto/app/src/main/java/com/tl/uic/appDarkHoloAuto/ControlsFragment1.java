@@ -15,18 +15,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.MediaController;
-import android.widget.TextView;
-import android.widget.ToggleButton;
 
 import androidx.core.widget.NestedScrollView;
 import androidx.fragment.app.Fragment;
 
 import com.tl.uic.Tealeaf;
-import com.tl.uic.appDarkHoloAuto.util.TLHelper;
 
 /**
  * @author ohernandezltmac
