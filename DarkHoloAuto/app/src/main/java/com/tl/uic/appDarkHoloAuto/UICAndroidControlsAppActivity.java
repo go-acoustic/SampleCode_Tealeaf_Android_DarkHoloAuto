@@ -77,6 +77,7 @@ public class UICAndroidControlsAppActivity extends AppCompatActivity {
      * @see android.app.Activity#dispatchTouchEvent(android.view.MotionEvent)
      */
     public boolean dispatchTouchEvent(MotionEvent e) {
+        Tealeaf.dispatchTouchEvent(this, e);
         return super.dispatchTouchEvent(e);
     }
 }

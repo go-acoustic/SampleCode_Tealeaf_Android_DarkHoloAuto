@@ -10,16 +10,17 @@ package com.tl.uic.appDarkHoloAuto;
 import android.app.Activity;
 import android.app.Dialog;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.tl.uic.Tealeaf;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
-public class MyDialogFragment extends DialogFragment {
+import com.tl.uic.Tealeaf;
+import com.tl.uic.util.TLFDialogFragment;
+
+public class MyDialogFragment extends TLFDialogFragment {
 
     public MyDialogFragment() {
         // Empty constructor is required for DialogFragment
