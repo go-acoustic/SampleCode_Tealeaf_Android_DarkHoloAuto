@@ -10,21 +10,30 @@
 package com.tl.uic.appDarkHoloAuto;
 
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.WindowManager;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
 
+import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.tl.uic.Tealeaf;
 import com.tl.uic.model.ScreenviewType;
+import com.tl.uic.util.ActionBarDrawerToggleTealeaf;
 
 public class UICAndroidControlsAppActivity extends AppCompatActivity {
     private TabAdapter adapter;
     private TabLayout tabLayout;
     private ViewPager viewPager;
+
+    private DrawerLayout drawerLayout;
+    private ActionBarDrawerToggleTealeaf actionBarDrawerToggle;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -65,10 +74,50 @@ public class UICAndroidControlsAppActivity extends AppCompatActivity {
             }
         });
 
+        //get drawer layout and add listener for capturing open/close events
+        //the actionBarDrawerToggle will be used to automatically capture the events
+        drawerLayout = findViewById(R.id.drawerLayout);
+        actionBarDrawerToggle = new ActionBarDrawerToggleTealeaf(this, drawerLayout, R.string.nav_drawer_menu_open, R.string.nav_drawer_menu_close);
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
+
+        //navigate to selected fragment upon tapping item in NavDrawer
+        NavigationView navigationView = findViewById(R.id.nav_drawer_view);
+        navigationView.setNavigationItemSelectedListener(menuItem -> {
+            int itemId = menuItem.getItemId();
+            switch(itemId) {
+                case R.id.landingFragment:
+                    viewPager.setCurrentItem(0);
+                    break;
+                case R.id.timeFragment:
+                    viewPager.setCurrentItem(3);
+                    break;
+                case R.id.alertFragment:
+                    viewPager.setCurrentItem(4);
+                    break;
+                default:
+                    break;
+            }
+            drawerLayout.closeDrawers();
+            return true;
+        });
+
+        //show NavDrawer button on the actionbar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         // This is the Home screen Fragment content.
         Tealeaf.logScreenview(UICAndroidControlsAppActivity.this, adapter.getItem(0).getClass().getSimpleName(), ScreenviewType.LOAD);
         Tealeaf.onResumeFragment(UICAndroidControlsAppActivity.this, null, adapter.getItem(0));
 
+    }
+
+    //when NavDrawer button is tapped, toggle button (open/close)
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(actionBarDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     /* Add touch event to collect gestures for Tealeaf.
@@ -77,6 +126,7 @@ public class UICAndroidControlsAppActivity extends AppCompatActivity {
      * @see android.app.Activity#dispatchTouchEvent(android.view.MotionEvent)
      */
     public boolean dispatchTouchEvent(MotionEvent e) {
+        Tealeaf.dispatchTouchEvent(this, e);
         return super.dispatchTouchEvent(e);
     }
 }

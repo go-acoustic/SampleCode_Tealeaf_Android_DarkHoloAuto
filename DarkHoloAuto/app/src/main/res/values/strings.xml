@@ -43,17 +43,34 @@
     <string name="digitalClock">DigitalClock</string>
     <string name="primary">Primary</string>
     <string name="hint">Hint</string>
-    <string name="alert1">Alert 1 Button</string>
-    <string name="alert2">Log Dialog Fragment</string>
+
+    <string name="alert1">Auto-Generated Alert Dialog</string>
+    <string name="alert2">User-Generated Alert Dialog</string>
+    <string name="alertWithList">List Contained Alert Dialog</string>
+    <string name="alertWithCustomContent">Custom Content Alert Dialog</string>
+    <string name="logDialogFragment">Log Dialog Fragment</string>
     <string name="alertTitle">Example Alert</string>
+    <string name="alertTitleList">Choose a Planet</string>
     <string name="alertMessage1">Alert 1 Button</string>
     <string name="alertMessage2">Alert 2 Button</string>
+
     <string name="productDesc">Product</string>
     <string name="itemName">Item Name</string>
+
+    <string name="custom_dialog_fragment">Custom Dialog Fragment</string>
+    <string name="custom_dialog_fragment_label1">label1</string>
+    <string name="custom_dialog_fragment_label2">label2</string>
 
     <string name="bottom_sheet_fragment">Bottom Sheet Fragment</string>
     <string name="bottom_sheet_option_camera">Use Camera</string>
     <string name="bottom_sheet_option_gallery">Upload from Gallery</string>
     <string name="bottom_sheet_option_heading">Add Photo</string>
     <string name="bottom_sheet_option_remove_photo">Remove Photo</string>
+
+    <string name="nav_drawer_menu_item_time">Date and Time</string>
+    <string name="nav_drawer_menu_item_landing">Home</string>
+    <string name="nav_drawer_menu_item_alerts">Alert Dialog</string>
+    <string name="nav_drawer_menu_open">Open</string>
+    <string name="nav_drawer_menu_close">Close</string>
+
 </resources>

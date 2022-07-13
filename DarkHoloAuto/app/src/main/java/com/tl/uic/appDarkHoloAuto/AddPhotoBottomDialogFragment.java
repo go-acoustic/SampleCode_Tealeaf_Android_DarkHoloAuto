@@ -8,10 +8,10 @@ import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.tl.uic.Tealeaf;
+import com.tl.uic.util.TLFBottomSheetDialogFragment;
 
-public class AddPhotoBottomDialogFragment extends BottomSheetDialogFragment {
+public class AddPhotoBottomDialogFragment extends TLFBottomSheetDialogFragment {
 
     public static AddPhotoBottomDialogFragment newInstance() {
         return new AddPhotoBottomDialogFragment();
