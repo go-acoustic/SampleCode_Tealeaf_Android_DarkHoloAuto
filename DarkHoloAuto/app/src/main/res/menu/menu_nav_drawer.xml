@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/landingFragment"
+        android:icon="@drawable/ic_outline_home_24"
+        android:title="@string/nav_drawer_menu_item_landing" />
+
+    <item
+        android:id="@+id/timeFragment"
+        android:icon="@drawable/ic_baseline_access_time_24"
+        android:title="@string/nav_drawer_menu_item_time" />
+
+    <item
+        android:id="@+id/alertFragment"
+        android:icon="@drawable/ic_outline_add_alert_24"
+        android:title="@string/nav_drawer_menu_item_alerts" />
+
+</menu>

@@ -36,5 +36,20 @@
       <option name="name" value="maven" />
       <option name="url" value="https://raw.githubusercontent.com/acoustic-analytics/Android_Maven/master" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="file:$PROJECT_DIR$/../../../Android_Maven/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="file:$PROJECT_DIR$/$HOME/Developer/Acoustic/Android_Maven" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="file:$PROJECT_DIR$/app/$HOME/Developer/Acoustic/Android_Maven" />
+    </remote-repository>
   </component>
 </project>

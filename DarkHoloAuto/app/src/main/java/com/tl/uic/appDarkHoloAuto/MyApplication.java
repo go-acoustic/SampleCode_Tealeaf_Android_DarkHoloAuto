@@ -10,7 +10,6 @@
 package com.tl.uic.appDarkHoloAuto;
 
 import com.tl.uic.Tealeaf;
-import com.tl.uic.app.UICApplication;
 
 import android.app.Application;
 
@@ -18,9 +17,9 @@ public class MyApplication extends Application {
 	@Override
 	public void onCreate() {
 		super.onCreate();
-        // TeaCuts (AspectJ) needs to have override methods to add hooks to it.
 
 		// Enable Tealeaf library
+		new Tealeaf(this);
 		Tealeaf.enable();
 	}
 }

@@ -11,31 +11,60 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/scrollView1"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
+    android:layout_height="fill_parent">
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:orientation="vertical" >
 
         <Button
-            android:id="@+id/button1"
-            android:layout_width="wrap_content"
+            android:id="@+id/alertButton1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/buttonBackground"
-            android:layout_marginBottom="5dp"
+            android:padding="10dp"
+            android:layout_marginBottom="8dp"
             android:text="@string/alert1"/>
         <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
+            android:id="@+id/alertButton2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/buttonBackground"
-            android:layout_marginBottom="5dp"
+            android:padding="10dp"
+            android:layout_marginBottom="8dp"
             android:text="@string/alert2"/>
         <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
+            android:id="@+id/alertButtonList"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/buttonBackground"
+            android:padding="10dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/alertWithList"/>
+        <Button
+            android:id="@+id/alertButtonCustomContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/buttonBackground"
+            android:padding="10dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/alertWithCustomContent"/>
+        <Button
+            android:id="@+id/dialogFragmentButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/buttonBackground"
+            android:padding="10dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/custom_dialog_fragment"/>
+        <Button
+            android:id="@+id/bottomSheetButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginBottom="8dp"
             android:background="@color/buttonBackground"
             android:text="@string/bottom_sheet_fragment"/>
     </LinearLayout>

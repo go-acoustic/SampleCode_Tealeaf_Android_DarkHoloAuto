@@ -23,25 +23,12 @@ import androidx.fragment.app.Fragment;
 import com.ibm.eo.EOCore;
 import com.tl.uic.Tealeaf;
 import com.tl.uic.TealeafEOLifecycleObject;
-import com.tl.uic.appDarkHoloAuto.util.TLHelper;
 
 
 public class ControlsFragment3 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.controls3, container, false);
-
-        EditText et = v.findViewById(R.id.editText1);
-
-        TLHelper.addFocusAndRegister(et, this.getActivity());
-        et = v.findViewById(R.id.editText2);
-        TLHelper.addFocusAndRegister(et, this.getActivity());
-        et = v.findViewById(R.id.editText3);
-        TLHelper.addFocusAndRegister(et, this.getActivity());
-        et = v.findViewById(R.id.editText4);
-        TLHelper.addFocusAndRegister(et, this.getActivity());
-        et = v.findViewById(R.id.editText5);
-        TLHelper.addFocusAndRegister(et, this.getActivity());
 
         final EditText postMessageUrl = v.findViewById(R.id.postMessageUrl);
         postMessageUrl.setText(EOCore.getConfigItemString(Tealeaf.TLF_POST_MESSAGE_URL, TealeafEOLifecycleObject.getInstance()));
@@ -75,7 +62,6 @@ public class ControlsFragment3 extends Fragment {
         AutoCompleteTextView acet = v.findViewById(R.id.autoCompleteTextView1);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_dropdown_item_1line, COUNTRIES);
         acet.setAdapter(adapter);
-        TLHelper.addFocusAndRegister(acet, this.getActivity());
         return v;
     }
 
