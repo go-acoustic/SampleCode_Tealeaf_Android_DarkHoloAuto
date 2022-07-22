@@ -10,7 +10,6 @@
 package com.tl.uic.appDarkHoloAuto;
 
 import android.annotation.SuppressLint;
-import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +18,7 @@ import android.widget.Button;
 
 import com.tl.uic.util.DialogUtil;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 public class ControlsFragment5 extends Fragment {
