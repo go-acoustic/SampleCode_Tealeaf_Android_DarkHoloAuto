@@ -3,7 +3,7 @@
     "GlobalScreenSettings":{
       "ScreenChange": true,
       "DisplayName": "",
-      "CaptureLayoutDelay": 500,
+      "CaptureLayoutDelay": 300,
       "ScreenShot": true,
       "NumberOfWebViews": 0,
       "CaptureUserEvents": true,
@@ -36,35 +36,35 @@
     },
     "ControlsFragment1": {
       "DisplayName": "CA1",
-      "CaptureLayoutDelay": 800
+      "CaptureLayoutDelay": 200
     },
     "ControlsFragment2": {
       "DisplayName": "CA2",
-      "CaptureLayoutDelay": 500
+      "CaptureLayoutDelay": 100
     },
     "ControlsFragment3": {
       "DisplayName": "CA3",
-      "CaptureLayoutDelay": 300
+      "CaptureLayoutDelay": 100
     },
     "ControlsFragment4": {
       "DisplayName": "CA4",
-      "CaptureLayoutDelay": 200
+      "CaptureLayoutDelay": 100
     },
     "ControlsFragment5": {
       "DisplayName": "CA5",
-      "CaptureLayoutDelay": 200
+      "CaptureLayoutDelay": 100
     },
     "ControlsFragment6": {
       "DisplayName": "CA6",
-      "CaptureLayoutDelay": 200
+      "CaptureLayoutDelay": 100
     },
     "ControlsFragment7": {
       "DisplayName": "CA7",
-      "CaptureLayoutDelay": 200
+      "CaptureLayoutDelay": 100
     },
     "ControlsFragment8": {
       "DisplayName": "CA8",
-      "CaptureLayoutDelay": 200
+      "CaptureLayoutDelay": 100
     }
   },
   "AppendMapIds": {
