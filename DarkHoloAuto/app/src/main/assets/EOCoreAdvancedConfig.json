@@ -1,12 +1,20 @@
 {
-    "ApplicationBackgroundTimeInterval": 60,
-    "ApplicationInBackgroundEnabled": true,
-    "BufferPercent": 20,
-    "CachedFileMaxBytesSize": 400000,
+    "MaxNumberOfFilesToCache": 5,
+    "CachedFileMaxBytesSize":   400000,
+    "PostMessageMaxBytesSize": 2048000,
+    "PostMessageTimeout": 3000,
+    "PostMessageSocketTimeout": 3000,
     "CompressPostMessage": true,
+    "BufferPercent": 20,
+    "OrientationSensorDelay": 100000,
+    "OrientationDelayNotificationToModules": 1000,
+    "ApplicationBackgroundTimeInterval": 60,
+    "TurnOffCorrectOrientationUpdates": false,
     "DefaultOrientation": 0,
+    "ApplicationInBackgroundEnabled": true,
     "DisableCookieManager": false,
-    "LibraryVersion": "2.0.288",
+    "LibraryVersion": "2.0.295",
+    "MessageVersion": "6.0.0.0",
     "MNCMCC": {
         "00": "N/A",
         "20201": "Cosmote",
@@ -1497,13 +1505,5 @@
         "74801": "Ancel",
         "74807": "Movistar",
         "74810": "Claro"
-    },
-    "MaxNumberOfFilesToCache": 5,
-    "MessageVersion": "6.0.0.0",
-    "OrientationDelayNotificationToModules": 1000,
-    "OrientationSensorDelay": 3,
-    "PostMessageMaxBytesSize": 2048000,
-    "PostMessageSocketTimeout": 3000,
-    "PostMessageTimeout": 3000,
-    "TurnOffCorrectOrientationUpdates": false
+    }
 }

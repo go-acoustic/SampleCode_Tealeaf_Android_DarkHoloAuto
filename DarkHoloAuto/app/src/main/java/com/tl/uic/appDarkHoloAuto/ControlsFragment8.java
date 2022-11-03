@@ -10,6 +10,7 @@
 package com.tl.uic.appDarkHoloAuto;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +20,10 @@ import androidx.fragment.app.Fragment;
 
 import com.tl.uic.Tealeaf;
 import com.tl.uic.model.Connection;
+import com.tl.uic.util.TLFURLConnection;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Date;
@@ -54,33 +58,42 @@ public class ControlsFragment8 extends Fragment {
         });
 
         button = v.findViewById(R.id.button3);
-        button.setOnClickListener(new View.OnClickListener() {
+        button.setOnClickListener(view -> {
 
-            @Override
-            public void onClick(View view) {
-                Thread thread = new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        try {
-                            String imageUrl = "https://acoustic.com/";
-                            URL url = new URL(imageUrl);
+            Thread thread = new Thread(() -> {
+                try {
+                    String siteUrl = "https://acoustic.com";
+                    URL url = new URL(siteUrl);
 
-                            Connection connection = new com.tl.uic.model.Connection();
-                            connection.setUrl(imageUrl);
-                            connection.setInitTime(new Date().getTime());
+                    //example of automatically opening an http connection and logging the Connection properties
+                    HttpURLConnection httpClient = TLFURLConnection.openConnection(url);
 
-                            HttpURLConnection httpClient = (HttpURLConnection) url.openConnection();
+                    //example of updating the connection properties using the currently open http connection
+                    //this is only needed if the app needs to modify/update specific data values
+                    //otherwise, the above openConnection method is the only piece of code needed
+                    //to re-iterate, the following lines of code are optional
+                    Connection connection = TLFURLConnection.getConnection();
+                    //example of updating an existing property
+                    connection.setLoadTime(50);
+                    //calculate approximate response time
+                    connection.setResponseTime(new Date().getTime() - connection.getInitTime());
+                    //will need to manually make another call  after updating properties
+                    TLFURLConnection.setConnection(connection);
 
-                            connection.setStatusCode(httpClient.getResponseCode());
-                            connection.setResponseDataSize(httpClient.getContentLength());
-                            Tealeaf.logConnection(connection);
-                        } catch (Exception e) {
-                            Tealeaf.logException(e);
-                        }
+                    //example of how the response data can be extracted
+                    BufferedReader in = new BufferedReader(new InputStreamReader(httpClient.getInputStream()));
+                    String inputLine;
+                    while ((inputLine = in.readLine()) != null) {
+                        Log.d("TESTING", inputLine);
                     }
-                });
-                thread.start();
-            }
+                    in.close();
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+            });
+            thread.start();
         });
 
         button = v.findViewById(R.id.button5);
