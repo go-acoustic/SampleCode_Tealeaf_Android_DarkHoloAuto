@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   Copyright (C) 2018 Acoustic, L.P. All rights reserved.
 
   NOTICE: This file contains material that is confidential and proprietary to
@@ -9,74 +8,83 @@
   prohibited.
 -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:tools="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
-	<LinearLayout
-	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
-	    android:orientation="vertical" >
+    android:layout_height="fill_parent">
 
-		<Switch
-			android:id="@+id/saveUname_switch"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_gravity="right|center"
-			android:layout_marginLeft="6dp"
-			android:checked="true"
-			android:switchMinWidth="10dp"
-			android:textSize="16sp"
-			android:thumbTextPadding="3dp"
-			android:track="@drawable/switch_track_selector"
-			tools:checked="true" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-		<Switch
-			android:id="@+id/switch1"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:text="Switch" />
+        <Switch
+            android:id="@+id/saveUname_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center"
+            android:layout_marginStart="6dp"
+            android:checked="true"
+            android:switchMinWidth="10dp"
+            android:textSize="16sp"
+            android:thumbTextPadding="3dp"
+            android:track="@drawable/switch_track_selector"
+            tools:checked="true"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
 
-		<Button
-			android:id="@+id/button1"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_marginTop="5dp"
-			android:text="Custom Event"/>
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Switch"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
 
-		<Button
-			android:id="@+id/button2"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_marginTop="5dp"
-			android:text="Exception"/>
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Custom Event" />
 
-		<Button
-			android:id="@+id/button3"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_marginTop="5dp"
-			android:text="Connection"/>
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Exception" />
 
-		<Button
-			android:id="@+id/button5"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_marginTop="5dp"
-			android:text="Connection with error"/>
+        <Button
+            android:id="@+id/btnConnection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="HttpURL Connection" />
 
-		<EditText
-			android:layout_width="300dp"
-			android:layout_height="wrap_content"
-			android:id="@+id/editText"
-			android:hint="Enter text"/>
+        <Button
+            android:id="@+id/btnOKHttpConnection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="OKHttp Connection" />
 
-		<Button
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="Submit"
-			android:id="@+id/button4"/>
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Connection with error" />
 
-	
-	</LinearLayout>
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter text" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit" />
+
+
+    </LinearLayout>
 </ScrollView>
