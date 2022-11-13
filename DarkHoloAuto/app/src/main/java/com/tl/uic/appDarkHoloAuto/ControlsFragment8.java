@@ -71,6 +71,8 @@ public class ControlsFragment8 extends Fragment {
 
                     //example of automatically opening an http connection and logging the Connection properties
                     HttpURLConnection httpClient = TLFURLConnection.openConnection(url);
+                    //example of automatically opening an http connection and logging the Connection properties
+//                    Object[] clientObject = openConnection(getContext(), siteUrl, ConnectionType.URL, ResponseType.DEFAULT, null);
 
                     //example of updating the connection properties using the currently open http connection
                     //this is only needed if the app needs to modify/update specific data values
@@ -85,6 +87,7 @@ public class ControlsFragment8 extends Fragment {
                     TLFURLConnection.setConnection(connection);
 
                     //example of how the response data can be extracted
+//                    HttpURLConnection httpClient = (HttpURLConnection) clientObject[0];
                     BufferedReader in = new BufferedReader(new InputStreamReader(httpClient.getInputStream()));
                     String inputLine;
                     while ((inputLine = in.readLine()) != null) {
@@ -116,6 +119,15 @@ public class ControlsFragment8 extends Fragment {
                         ByteString byteResponse = (ByteString) test2[0];
                         Log.i("TESTING", "Bytes Response = " + byteResponse);
 
+                        //example of automatically opening an OKHttp connection, logging the Connection properties, and returning the Response as a string
+//                        Object[] test1 = openConnection(getContext(), urlOKHttp, ConnectionType.OKHTTP, ResponseType.STRING, null);
+//                        String stringResponse = (String) test1[0];
+//                        Log.i("TESTING", "OKHttp String Response = " + stringResponse);
+//                        //example of automatically opening an OKHttp connection, logging the Connection properties, and returning the Response in Bytes
+//                        Object[] test2 = openConnection(getContext(), urlOKHttp, ConnectionType.OKHTTP, ResponseType.BYTES, null);
+//                        ByteString byteResponse = (ByteString) test2[0];
+//                        Log.i("TESTING", "OKHttp Bytes Response = " + byteResponse);
+
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -126,34 +138,40 @@ public class ControlsFragment8 extends Fragment {
             thread.start();
         });
 
+        button = v.findViewById(R.id.btnVolleyConnection);
+        button.setOnClickListener(view -> {
+            String urlVolley = "https://jsonplaceholder.typicode.com/posts/";
+//            try {
+//                openConnection(getContext(), urlVolley, ConnectionType.VOLLEY, ResponseType.DEFAULT, response -> Log.i("TESTING", "Volley Response = " + response));
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+        });
+
         button = v.findViewById(R.id.button5);
-        button.setOnClickListener(new View.OnClickListener() {
+        button.setOnClickListener(view -> {
+            Thread thread = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        String imageUrl = "http://www.google.com/";
+                        URL url = new URL(imageUrl);
 
-            @Override
-            public void onClick(View view) {
-                Thread thread = new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        try {
-                            String imageUrl = "http://www.google.com/";
-                            URL url = new URL(imageUrl);
+                        Connection connection = new Connection();
+                        connection.setUrl(imageUrl);
+                        connection.setInitTime(new Date().getTime());
 
-                            Connection connection = new com.tl.uic.model.Connection();
-                            connection.setUrl(imageUrl);
-                            connection.setInitTime(new Date().getTime());
+                        HttpURLConnection httpClient = (HttpURLConnection) url.openConnection();
 
-                            HttpURLConnection httpClient = (HttpURLConnection) url.openConnection();
-
-                            connection.setStatusCode(httpClient.getResponseCode());
-                            connection.setResponseDataSize(httpClient.getContentLength());
-                            Tealeaf.logConnection(connection);
-                        } catch (Exception e) {
-                            Tealeaf.logException(e);
-                        }
+                        connection.setStatusCode(httpClient.getResponseCode());
+                        connection.setResponseDataSize(httpClient.getContentLength());
+                        Tealeaf.logConnection(connection);
+                    } catch (Exception e) {
+                        Tealeaf.logException(e);
                     }
-                });
-                thread.start();
-            }
+                }
+            });
+            thread.start();
         });
 
 
