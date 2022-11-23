@@ -85,6 +85,11 @@ public class ControlsFragment8 extends Fragment {
                     //will need to manually make another call  after updating properties
                     TLFConnectionUtil.setConnection(connection);
 
+                    // TODO: update Tealeaf version (after sdk has been merged into develop) in gradle.properties and then uncomment the following 3 lines
+//                    Log.i("TESTING", connection.headers.toString())
+//                    Log.i("TESTING", connection.payload)
+//                    Log.i("TESTING", connection.cookies)
+
                     //example of how the response data can be extracted
                     HttpURLConnection httpClient = (HttpURLConnection) clientObject[0];
                     BufferedReader in = new BufferedReader(new InputStreamReader(httpClient.getInputStream()));
