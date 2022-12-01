@@ -1,5 +1,5 @@
 {
-    "LibraryVersion": "10.3.294",
+    "LibraryVersion": "10.3.300",
     "FilterMessageTypes": false,
     "MessageTypes": "4,5",
     "AddMessageTypeHeader": false,
@@ -25,6 +25,7 @@
     "GenerateImageHash": true,
     "SwitchWidth": 140,
     "EnableActivityLifeCycleListener": true,
+    "EnableFragmentLifeCycleListener":  true,
     "EditTextEnabled": true,
     "ClickEventEnabled": false,
     "TouchEventEnabled": false,
@@ -35,5 +36,6 @@
     "ColorAccent": "#FF4081",
     "EnableGestureSwipeLogScreen": true,
     "EnableScreenshotCache": false,
+    "LogFullRequestResponsePayloads": true,
     "FlushUpdatedPlaceHolders": false
 }

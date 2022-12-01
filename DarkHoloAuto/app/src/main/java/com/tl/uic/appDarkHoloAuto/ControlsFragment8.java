@@ -85,6 +85,10 @@ public class ControlsFragment8 extends Fragment {
                     //will need to manually make another call  after updating properties
                     TLFConnectionUtil.setConnection(connection);
 
+                    Log.i("TESTING", connection.getHeaders().toString());
+                    Log.i("TESTING", connection.getPayload());
+                    Log.i("TESTING", connection.getCookies());
+
                     //example of how the response data can be extracted
                     HttpURLConnection httpClient = (HttpURLConnection) clientObject[0];
                     BufferedReader in = new BufferedReader(new InputStreamReader(httpClient.getInputStream()));
