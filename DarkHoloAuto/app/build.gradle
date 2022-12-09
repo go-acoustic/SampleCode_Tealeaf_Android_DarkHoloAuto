@@ -34,6 +34,7 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:4.9.3'
     implementation 'com.android.volley:volley:1.2.1'
 
-    implementation 'com.ea:eocore:2.0.295'
-    implementation 'com.ea:tealeaf:10.3.301'
+    implementation "io.github.acoustic-analytics:eocore:2.0.296"
+    implementation "io.github.acoustic-analytics:tealeaf:10.3.303"
+
 }
