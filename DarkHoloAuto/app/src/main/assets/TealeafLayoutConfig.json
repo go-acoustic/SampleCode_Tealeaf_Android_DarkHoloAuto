@@ -9,7 +9,7 @@
       "CaptureUserEvents": true,
       "CaptureScreenVisits": true,
       "CaptureLayoutOn": 2,
-      "CaptureScreenshotOn": 1,
+      "CaptureScreenshotOn": 2,
       "Masking": {
         "HasMasking": true,
         "HasCustomMask": true,

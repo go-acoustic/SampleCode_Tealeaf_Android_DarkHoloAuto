@@ -35,7 +35,7 @@
     "ColorPrimaryDark": "#303F9F",
     "ColorAccent": "#FF4081",
     "EnableGestureSwipeLogScreen": true,
-    "EnableScreenshotCache": false,
+    "EnableScreenshotCache": true,
     "LogFullRequestResponsePayloads": true,
     "FlushUpdatedPlaceHolders": false
 }

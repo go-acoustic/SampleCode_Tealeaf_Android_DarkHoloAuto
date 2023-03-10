@@ -1,5 +1,5 @@
 /********************************************************************************************
-* Copyright (C) 2016 Acoustic, L.P. All rights reserved.
+* Copyright (C) 2023 Acoustic, L.P. All rights reserved.
 *
 * NOTICE: This file contains material that is confidential and proprietary to
 * Acoustic, L.P. and/or other developers. No license is granted under any intellectual or
@@ -10,7 +10,6 @@
 package com.tl.uic.appDarkHoloAuto;
 
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -24,7 +23,6 @@ import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.tl.uic.Tealeaf;
-import com.tl.uic.model.ScreenviewType;
 import com.tl.uic.util.ActionBarDrawerToggleTealeaf;
 
 public class UICAndroidControlsAppActivity extends AppCompatActivity {
@@ -65,8 +63,8 @@ public class UICAndroidControlsAppActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 // Each tab contains a Fragment, we'll log a screenview and its content.  Note:  Without new screenview load, replay renders content as Dynamic type in the same bucket.
-                Tealeaf.logScreenview(UICAndroidControlsAppActivity.this, adapter.getCurrentFragment().getClass().getSimpleName(), ScreenviewType.LOAD);
-                Tealeaf.onResumeFragment(UICAndroidControlsAppActivity.this, null, adapter.getCurrentFragment());
+//                Tealeaf.logScreenview(UICAndroidControlsAppActivity.this, adapter.getCurrentFragment().getClass().getSimpleName(), ScreenviewType.LOAD);
+//                Tealeaf.onResumeFragment(UICAndroidControlsAppActivity.this, null, adapter.getCurrentFragment());
             }
 
             @Override
@@ -104,11 +102,6 @@ public class UICAndroidControlsAppActivity extends AppCompatActivity {
 
         //show NavDrawer button on the actionbar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        // This is the Home screen Fragment content.
-        Tealeaf.logScreenview(UICAndroidControlsAppActivity.this, adapter.getItem(0).getClass().getSimpleName(), ScreenviewType.LOAD);
-        Tealeaf.onResumeFragment(UICAndroidControlsAppActivity.this, null, adapter.getItem(0));
-
     }
 
     //when NavDrawer button is tapped, toggle button (open/close)

@@ -28,12 +28,12 @@ android {
 
 dependencies {
     implementation fileTree(include: ["*.jar"], dir: "libs")
-    implementation "androidx.appcompat:appcompat:1.6.0"
+    implementation "androidx.appcompat:appcompat:1.6.1"
     implementation "com.google.android.material:material:1.8.0"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
     implementation "com.squareup.okhttp3:okhttp:4.10.0"
     implementation "com.android.volley:volley:1.2.1"
 
-    implementation "io.github.acoustic-analytics:eocore:2.0.304"
-    implementation "io.github.acoustic-analytics:tealeaf:10.3.318"
+    implementation "io.github.acoustic-analytics:eocore:+"
+    implementation "io.github.acoustic-analytics:tealeaf:+"
 }
