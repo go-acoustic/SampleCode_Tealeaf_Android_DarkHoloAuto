@@ -20,12 +20,14 @@ import androidx.fragment.app.Fragment;
 
 import com.tl.uic.Tealeaf;
 import com.tl.uic.model.Connection;
-import com.tl.uic.util.TLFURLConnection;
+import com.tl.uic.util.TLFConnectionUtil;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLClassLoader;
+import java.net.URLConnection;
 import java.util.Date;
 import java.util.HashMap;
 
@@ -65,20 +67,32 @@ public class ControlsFragment8 extends Fragment {
                     String siteUrl = "https://acoustic.com";
                     URL url = new URL(siteUrl);
 
+                    // Create a new TLFConnectionUtil object.
+                    TLFConnectionUtil connectionUtil = new TLFConnectionUtil();
+
+                    // Open the connection.
+                    Object[] clientObject = connectionUtil.openConnection(
+                            this.getContext(),
+                            siteUrl,
+                            TLFConnectionUtil.ConnectionType.URL,
+                            TLFConnectionUtil.ResponseType.DEFAULT,
+                            null);
+
                     //example of automatically opening an http connection and logging the Connection properties
-                    HttpURLConnection httpClient = TLFURLConnection.openConnection(url);
+//                    Object[] httpClient = TLFConnectionUtil.openConnection(url);
+                    URLConnection httpClient = (URLConnection) clientObject[0];
 
                     //example of updating the connection properties using the currently open http connection
                     //this is only needed if the app needs to modify/update specific data values
                     //otherwise, the above openConnection method is the only piece of code needed
                     //to re-iterate, the following lines of code are optional
-                    Connection connection = TLFURLConnection.getConnection();
+                    Connection connection = TLFConnectionUtil.getConnection();
                     //example of updating an existing property
                     connection.setLoadTime(50);
                     //calculate approximate response time
                     connection.setResponseTime(new Date().getTime() - connection.getInitTime());
                     //will need to manually make another call  after updating properties
-                    TLFURLConnection.setConnection(connection);
+                    TLFConnectionUtil.setConnection(connection);
 
                     //example of how the response data can be extracted
                     BufferedReader in = new BufferedReader(new InputStreamReader(httpClient.getInputStream()));

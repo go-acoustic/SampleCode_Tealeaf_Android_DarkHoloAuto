@@ -32,6 +32,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
 
-    implementation 'com.ea:eocore:2.0.295'
-    implementation 'com.ea:tealeaf:10.3.294'
+    // Public MavenCentral repo
+    implementation "io.github.acoustic-analytics:eocore:+"
+    implementation "io.github.acoustic-analytics:tealeaf:+"
 }
