@@ -33,6 +33,6 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
 
     // Public MavenCentral repo
-    implementation "io.github.acoustic-analytics:eocore:+"
-    implementation "io.github.acoustic-analytics:tealeaf:+"
+    implementation "io.github.go-acoustic:eocore:+"
+    implementation "io.github.go-acoustic:tealeaf:+"
 }
